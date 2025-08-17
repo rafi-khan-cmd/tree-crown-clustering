@@ -1,23 +1,32 @@
-# Tree Crown Detection and Clustering
+# 🌲 Tree Crown Detection and Clustering using Remote Sensing Imagery
 
-This project detects and clusters tree crowns from aerial RGB images using bounding box annotations.
+This project involves detecting tree crowns from high-resolution aerial imagery and clustering them based on their visual appearance. It uses RGB images and annotated XML files from the [NEON Tree Evaluation dataset](https://github.com/weecology/NeonTreeEvaluation), applying classical computer vision and unsupervised machine learning techniques in Python.
 
-## 🌿 Features
-- Parses `.xml` annotations
-- Crops crowns from aerial `.tif` images
-- Extracts color histograms
-- Clusters using KMeans
-- Visualizes results
+---
 
-## 📁 Sample Data
-Small subset of RGB and XML files are included in `sample_data/`.
+## 📌 Project Overview
 
-> Full dataset was omitted due to size. You can use your own dataset or request access [here](https://drive.google.com/your-shared-folder).
+🔍 **Goal**:  
+Automatically crop tree crowns from annotated aerial images and cluster them by visual similarity (e.g., color/texture) using color histograms and KMeans clustering.
 
-## 📓 Notebook
-This project was developed and tested in Google Colab.  
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/tree-crown-detector/blob/main/main.ipynb)
+🧠 **Key Techniques**:
+- XML parsing and bounding box extraction
+- Image cropping and preprocessing
+- Feature extraction via HSV color histograms
+- Unsupervised clustering with `KMeans`
+- Visualization of clustered crowns
 
-## 🔧 Setup
+---
+
+## 🗂️ Dataset Source
+
+This project uses the publicly available dataset from:
+
+**📦 NEON Tree Evaluation Dataset**  
+🔗 GitHub: [https://github.com/weecology/NeonTreeEvaluation](https://github.com/weecology/NeonTreeEvaluation)  
+📜 License: Public domain (CC0)
+
+To get the data:
+
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/weecology/NeonTreeEvaluation.git
