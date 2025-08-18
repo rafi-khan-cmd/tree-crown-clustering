@@ -25,7 +25,7 @@ Below are sample input images and their corresponding cropped crown regions, ext
 ![Image 1](samples/first_image/2018_SJER_3_252000_4106000_image_234.tif)
 
 **Cropped Crowns**  
-![Crown 1-1](samples/first_image/2018_SJER_3_252000_4106000_image_234_crown_0.jpgg)  
+![Crown 1-1](samples/first_image/2018_SJER_3_252000_4106000_image_234_crown_0.jpg)  
 
 ---
 
