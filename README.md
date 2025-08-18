@@ -22,31 +22,39 @@ Below are sample input images and their corresponding cropped crown regions, ext
 ### 🔹 Image 1
 
 **Original Image**  
-![Image 1](samples/image_1.jpg)
+![Image 1](samples/first_image/2018_SJER_3_252000_4106000_image_234.tif)
 
 **Cropped Crowns**  
-![Crown 1-1](samples/image_1_crown_0.jpg)  
-![Crown 1-2](samples/image_1_crown_1.jpg)
+![Crown 1-1](samples/first_image/2018_SJER_3_252000_4106000_image_234_crown_0.jpgg)  
 
 ---
 
 ### 🔹 Image 2
 
 **Original Image**  
-![Image 2](samples/image_2.jpg)
+![Image 2](samples/second_image/2018_SJER_3_252000_4106000_image_326.tif)
 
 **Cropped Crown**  
-![Crown 2-1](samples/image_2_crown_0.jpg)
+![Crown 2-1](samples/second_image/2018_SJER_3_252000_4106000_image_326_crown_0.jpg)
+![Crown 2-2](samples/second_image/2018_SJER_3_252000_4106000_image_326_crown_1.jpg)
+![Crown 2-3](samples/second_image/2018_SJER_3_252000_4106000_image_326_crown_2.jpg)
 
 ---
 
 ### 🔹 Image 3
 
 **Original Image**  
-![Image 3](samples/image_3.jpg)
+![Image 3](samples/third_image/2018_SJER_3_252000_4104000_image_628.tif)
 
 **Cropped Crown**  
-![Crown 3-1](samples/image_3_crown_0.jpg)
+![Crown 3-1](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_0.jpg)
+![Crown 3-2](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_1.jpg)
+![Crown 3-3](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_2.jpg)
+![Crown 3-4](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_3.jpg)
+![Crown 3-5](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_4.jpg)
+![Crown 3-6](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_5.jpg)
+![Crown 3-7](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_6.jpg)
+![Crown 3-8](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_7.jpg)
 
 ---
 
