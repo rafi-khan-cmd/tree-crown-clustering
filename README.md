@@ -22,7 +22,7 @@ Below are sample input images and their corresponding cropped crown regions, ext
 ### 🔹 Image 1
 
 **Original Image**  
-![Image 1](samples/first_image/2018_SJER_3_252000_4106000_image_234.tif)
+![Image 1](samples/first_image/2018_SJER_3_252000_4106000_image_234.jpg)
 
 **Cropped Crowns**  
 ![Crown 1-1](samples/first_image/2018_SJER_3_252000_4106000_image_234_crown_0.jpg)  
@@ -32,7 +32,7 @@ Below are sample input images and their corresponding cropped crown regions, ext
 ### 🔹 Image 2
 
 **Original Image**  
-![Image 2](samples/second_image/2018_SJER_3_252000_4106000_image_326.tif)
+![Image 2](samples/second_image/2018_SJER_3_252000_4106000_image_326.jpg)
 
 **Cropped Crown**  
 ![Crown 2-1](samples/second_image/2018_SJER_3_252000_4106000_image_326_crown_0.jpg)
@@ -44,7 +44,7 @@ Below are sample input images and their corresponding cropped crown regions, ext
 ### 🔹 Image 3
 
 **Original Image**  
-![Image 3](samples/third_image/2018_SJER_3_252000_4104000_image_628.tif)
+![Image 3](samples/third_image/2018_SJER_3_252000_4104000_image_628.jpg)
 
 **Cropped Crown**  
 ![Crown 3-1](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_0.jpg)
