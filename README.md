@@ -1,91 +1,28 @@
-# 🌲 Neon Tree Crown Detection & Clustering
+# Tree Crown Detection and Clustering
 
-This project performs **tree crown detection and clustering** on RGB aerial imagery from the NEON dataset. It uses bounding box annotations to extract individual tree crowns, compute HSV color histograms, and cluster similar crowns using unsupervised learning.
+Unsupervised clustering of tree crowns from aerial RGB imagery using the NEON dataset.
 
-> 🎯 The goal is to demonstrate preprocessing, feature extraction, and clustering in a real-world computer vision pipeline.
+## What it does
 
----
+Parses bounding box annotations (Pascal VOC XML format), crops individual tree crowns from aerial images, extracts HSV color histograms as features, and clusters crowns using KMeans.
 
-## 📂 Dataset
+## Dataset
 
-- **Source**: [NeonTreeEvaluation GitHub Repo](https://github.com/weecology/NeonTreeEvaluation)
-- Includes:
-  - Aerial RGB images
-  - XML annotations of tree crowns (Pascal VOC format)
+NEON Tree Evaluation dataset: https://github.com/weecology/NeonTreeEvaluation
 
----
+Includes aerial RGB images and XML annotations for tree crown bounding boxes.
 
-## 📸 Sample Images and Cropped Crowns
+## Pipeline
 
-Below are sample input images and their corresponding cropped crown regions, extracted using bounding boxes.
+1. Parse XML annotations and link to corresponding images
+2. Crop each tree crown using bounding box coordinates
+3. Extract and normalize HSV color histograms with cv2.calcHist()
+4. Cluster crowns into 2 groups using KMeans
 
-### 🔹 Image 1
+## Results
 
-**Original Image**  
-![Image 1](samples/first_image/2018_SJER_3_252000_4106000_image_234.jpg)
+221 crowns processed across 3 images. Cluster distribution: Counter({0: 123, 1: 98}). The two clusters broadly correspond to different vegetation types distinguished by HSV color signature.
 
-**Cropped Crowns**  
-![Crown 1-1](samples/first_image/2018_SJER_3_252000_4106000_image_234_crown_0.jpg)  
+## Dependencies
 
----
-
-### 🔹 Image 2
-
-**Original Image**  
-![Image 2](samples/second_image/2018_SJER_3_252000_4106000_image_326.jpg)
-
-**Cropped Crown**  
-![Crown 2-1](samples/second_image/2018_SJER_3_252000_4106000_image_326_crown_0.jpg)
-![Crown 2-2](samples/second_image/2018_SJER_3_252000_4106000_image_326_crown_1.jpg)
-![Crown 2-3](samples/second_image/2018_SJER_3_252000_4106000_image_326_crown_2.jpg)
-
----
-
-### 🔹 Image 3
-
-**Original Image**  
-![Image 3](samples/third_image/2018_SJER_3_252000_4104000_image_628.jpg)
-
-**Cropped Crown**  
-![Crown 3-1](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_0.jpg)
-![Crown 3-2](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_1.jpg)
-![Crown 3-3](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_2.jpg)
-![Crown 3-4](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_3.jpg)
-![Crown 3-5](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_4.jpg)
-![Crown 3-6](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_5.jpg)
-![Crown 3-7](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_6.jpg)
-![Crown 3-8](samples/third_image/2018_SJER_3_252000_4104000_image_628_crown_7.jpg)
-
----
-
-## 🧠 Project Pipeline
-
-### 1. 🗂️ Unzip and Load Data
-- RGB and XML annotation files are unzipped and parsed.
-- Each XML file is linked to its corresponding image.
-
-### 2. 📦 Bounding Box Extraction
-- The `parse_annotation()` function reads each XML and extracts `(xmin, ymin, xmax, ymax)` for all tree crowns.
-
-### 3. ✂️ Cropping Crowns
-- Each bounding box is used to crop a crown from the RGB image.
-- Cropped images are saved to `/content/cropped_crowns`.
-
-### 4. 🌈 Feature Extraction
-- HSV color histograms are computed using `cv2.calcHist()`.
-- Histograms are flattened and normalized.
-
-### 5. 🤖 Clustering
-- Crowns are grouped using `KMeans(n_clusters=2)`.
-- Cluster distribution is printed.
-- Sample images from each cluster are visualized.
-
----
-
-## 📊 Output Preview
-
-The cropped crowns are clustered into visually distinct groups.  
-Each cluster can represent different vegetation types or lighting conditions.
-
-```python
-Cluster distribution: Counter({0: 123, 1: 98})
+Python, OpenCV, NumPy, scikit-learn
